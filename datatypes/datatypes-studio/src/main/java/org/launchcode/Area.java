@@ -11,7 +11,6 @@ public class Area {
         double radius;
         //double areaOfCircle;
         System.out.println("Enter the Radius");
-
         do
         {
             while(!input.hasNextDouble())
@@ -26,7 +25,7 @@ public class Area {
                 System.out.println("Enter the Radius");
             }
         }while(radius<0);
-
+        input.close();
         System.out.println("The area of circle is :" +Circle.getArea(radius));
     }
 }

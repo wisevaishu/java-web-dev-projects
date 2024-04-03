@@ -40,5 +40,6 @@ public class ArrayListGradebook {
 
         double avg = sum / students.size();
         System.out.println("Average grade: " + avg);
+
     }
 }
