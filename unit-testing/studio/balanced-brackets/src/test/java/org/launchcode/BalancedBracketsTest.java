@@ -12,6 +12,7 @@ class BalancedBracketsTest {
     }
 
     @Test
+<<<<<<< HEAD
     public void onlyBracketsReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
     }
@@ -28,10 +29,49 @@ class BalancedBracketsTest {
     //That is, whether it consists entirely of pairs of opening/closing
     @Test
     public void testForOpeningBracket(){
+=======
+    public void emptyStringReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets(""));
+    }
+
+    @Test
+    public void stringWithoutBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("LaunchCode"));
+    }
+
+    @Test
+    public void stringWithBalancedBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[LaunchCode]"));
+    }
+
+    @Test
+    public void stringWithBalancedBracketsAtStartReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[]LaunchCode"));
+    }
+
+    @Test
+    public void stringWithBalancedBracketsAtEndReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("Launch[Code]"));
+    }
+
+    @Test
+    public void stringWithUnbalancedBracketsAtStartReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[LaunchCode"));
+    }
+
+    @Test
+    public void stringWithUnbalancedBracketsAtEndReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("Launch]Code["));
+    }
+
+    @Test
+    public void stringWithOnlyOpeningBracketReturnsFalse() {
+>>>>>>> fb0cc7abf0673a0d565ce78aa4824909eff0d046
         assertFalse(BalancedBrackets.hasBalancedBrackets("["));
     }
 
     @Test
+<<<<<<< HEAD
     public void testForClosingBracket(){
         assertFalse(BalancedBrackets.hasBalancedBrackets("]"));
     }
@@ -91,5 +131,29 @@ class BalancedBracketsTest {
     @Test
     public void testForFailString2(){
         assertFalse(BalancedBrackets.hasBalancedBrackets("Launch]Code["));
+=======
+    public void stringWithOnlyClosingBracketReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]"));
+    }
+
+    @Test
+    public void stringWithOpeningAndClosingBracketsInReverseOrderReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
+    }
+
+    @Test
+    public void stringWithMultipleBalancedBracketPairsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[Launch][Code]"));
+    }
+
+    @Test
+    public void stringWithNestedBalancedBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[Launch[Code]]"));
+    }
+
+    @Test
+    public void stringWithUnbalancedNestedBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[Launch[Code]"));
+>>>>>>> fb0cc7abf0673a0d565ce78aa4824909eff0d046
     }
 }
