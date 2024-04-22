@@ -11,14 +11,20 @@ public class Main {
 
         // TODO: Use a Comparator class to sort the 'flavors' array alphabetically by the 'name' field.
         Comparator comparator = new FlavorComparator();
+        Comparator cone = new ConeComparator();
 
-        // TODO: Use a Comparator class to sort the 'cones' array in increasing order by the 'cost' field.
+        // TODO: Use a Comparator class to sort the 'cones' array in increasing order by the
+        //  'cost' field.
 
 
         flavors.sort(comparator);
 
+
+        cones.sort(cone);
+
         //flavors.sort(new FlavorComparator());
 
-        // TODO: Print the 'flavors' and 'cones' lists (in a clear manner) to verify the sorting.
+        // TODO: Print the 'flavors' and 'cones' lists (in a clear manner) to verify the
+        //  sorting.
     }
 }
