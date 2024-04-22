@@ -1,4 +1,4 @@
-package org.launchcode;
+
 public class BalancedBrackets {
     /*
      * The function BalancedBrackets should return true if and only if
@@ -21,13 +21,21 @@ public class BalancedBrackets {
      */
     public static boolean hasBalancedBrackets(String str) {
         int brackets = 0;
+        int numOpenBrackets = 0;
+        int numClosedBrackets = 0;
+
         for (char ch : str.toCharArray()) {
             if (ch == '[') {
                 brackets++;
+//                numOpenBrackets++;
             } else if (ch == ']') {
                 brackets--;
+                if (brackets < 0) {
+                    return false;
+                }
+//                numClosedBrackets++;
             }
         }
-        return brackets == 0;
+        return brackets == 0 /*&& numClosedBrackets == numOpenBrackets*/;
     }
 }
