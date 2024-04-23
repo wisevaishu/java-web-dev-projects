@@ -1,3 +1,4 @@
+package org.launchcode;
 
 public class BalancedBrackets {
     /*
@@ -27,29 +28,17 @@ public class BalancedBrackets {
         for (char ch : str.toCharArray()) {
             if (ch == '[') {
                 brackets++;
-<<<<<<< HEAD:unit-testing/studio/balanced-brackets/src/main/java/BalancedBrackets.java
 //                numOpenBrackets++;
             } else if (ch == ']') {
                 brackets--;
                 if (brackets < 0) {
                     return false;
                 }
+//                if (brackets < 0) {
 //                numClosedBrackets++;
+//                }
             }
         }
         return brackets == 0 /*&& numClosedBrackets == numOpenBrackets*/;
-=======
-                numOpenBrackets++;
-            } else if (ch == ']') {
-                if (brackets > 0) {
-                    brackets--;
-                }
-                numClosedBrackets++;
-            }
-        }
-        return brackets == 0 && numClosedBrackets == numOpenBrackets;
->>>>>>> fb0cc7abf0673a0d565ce78aa4824909eff0d046:unit-testing/studio/balanced-brackets/src/main/java/org/launchcode/BalancedBrackets.java
     }
-
-
 }

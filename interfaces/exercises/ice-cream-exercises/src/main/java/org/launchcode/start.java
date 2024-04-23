@@ -3,7 +3,7 @@ package org.launchcode;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class Main {
+public class start {
     public static void main(String[] args) {
         Case menu = new Case();
         ArrayList<Flavor> flavors = menu.getFlavors();
