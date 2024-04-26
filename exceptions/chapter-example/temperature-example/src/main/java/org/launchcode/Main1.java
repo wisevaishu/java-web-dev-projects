@@ -2,8 +2,8 @@ package org.launchcode;
 
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main1 {
+    public static void main(String[] args) throws TemperatureException {
 
         double fahrenheit;
         Scanner input;
